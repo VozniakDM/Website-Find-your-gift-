@@ -1,0 +1,79 @@
+.footer {
+  background-color: $background-footer;
+  @include flexbox($jc: center, $ai: center, $dir: column, $wrap: nowrap);
+  width: 100%;
+  padding: 106px 220px 35px;
+  @media screen and (max-width:$bp-tablet-lg) {
+    padding: 106px 110px 35px;
+  }  
+  @media screen and (max-width:$bp-tablet) {
+    padding: 80px 110px 35px;
+  } 
+  @media screen and (max-width: $bp-mobile-sm) {
+    padding: 50px 50px 35px;
+  }
+}
+.footer-menu {
+  @include flexbox($ai: center);
+  padding-bottom: 43px;  
+    &__link {
+      font-family: $font-gilroy;
+      @include font($fs: 14px, $fw: 1000, $lh: 140.62%, $color: $black);
+      padding: 0 40.5px;
+      @media screen and (max-width:$bp-tablet) {
+        padding: 0 30px;
+      }
+      @media screen and (max-width: $bp-mobile-sm) {
+        padding: 0 15px;
+      }
+    }
+    &__link-logo {
+      font-family: $font-HomemadeApple;
+      font-style: normal;
+      @include font($fs: 18px, $fw: 400, $lh: 39px, $color: $orange);
+      @include flexbox($ai: center);
+      text-align: center;
+      padding: 0 100px;
+      @media screen and (max-width:$bp-tablet) {
+        padding: 0 50px;
+      }      
+      @media screen and (max-width: $bp-mobile-sm) {
+        padding: 0 15px;
+      }
+    }
+}
+.logo-menu {
+  @include flexbox();
+  gap: 26px;
+  padding: 56px 0 73px;
+  @media screen and (max-width:$bp-tablet) {
+    padding: 40px 0 50px;
+  }
+  @media screen and (max-width: $bp-mobile-sm) {
+    gap: 15px;
+  }
+  
+  @media screen and (max-width: $bp-mobile-sm) {
+    .logo-menu {
+      &__link {
+        img {
+          flex-shrink: 0
+        }
+
+      }
+    }
+  } 
+}
+.information {
+  @include flexbox();
+  gap: 14px;
+    &__text {
+      font-family: $font-gilroy;
+      @include font($fs: 14px, $lh: 140.62%, $color: $black);
+      text-align: center;
+    }
+}
+hr {
+  border: 1px solid $black;
+  width: 100%;
+}

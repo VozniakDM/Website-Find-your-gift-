@@ -1,0 +1,62 @@
+.sectionOne {
+  background-color: $background-sectionOne;
+}
+.main-content {
+    &__sectionOne {
+      @include flexbox($jc: space-between, $wrap: wrap);
+    }
+}
+.img {
+    @include img()
+}
+.chapterOne {
+  max-width: 50%;
+  max-height: 100%;
+  padding: 154px 126px 135px 162px;
+  @media screen and (max-width:1200px) {
+    padding: 80px 80px 80px 120px;
+  }
+  @media screen and (max-width:$bp-tablet-lg) {
+    padding: 80px;
+  }
+  @media screen and (max-width:$bp-tablet) {
+    padding: 60px;
+  }
+  @media screen and (max-width:610px) {
+    padding: 30px;
+  }
+  @media screen and (max-width: $bp-mobile-sm) {
+    max-width: 100%;
+  }
+}
+.chapterImg {
+  width: 50%;
+  img {
+    @include img()
+  }  
+  @media screen and (max-width: $bp-mobile-sm) {
+    width: 100%;
+  }
+}    
+
+.chapterFour {
+  width: 50%;
+  max-height: 100%;
+  padding: 164px 166px 104px 113px;
+  @media screen and (max-width:1200px) {
+    padding: 80px 80px 80px 100px;
+  }
+  @media screen and (max-width:$bp-tablet-lg) {
+    padding: 80px;
+  }
+  @media screen and (max-width:$bp-tablet) {
+    padding: 60px;
+  }
+  @media screen and (max-width:610px) {
+    padding: 30px;
+  }
+  @media screen and (max-width: $bp-mobile-sm) {
+    width: 100%;
+  }
+}
+

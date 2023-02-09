@@ -1,0 +1,67 @@
+.header {
+  @include flexbox($jc: space-between, $ai: center);
+  width: 100%;  
+  background-color: $background-header;
+  padding: 36px 34px 36px 80px; 
+  @media screen and (max-width: 650px) {
+    padding-left: 30px;
+  }
+  @media screen and (max-width: $bp-mobile-sm) {
+    padding: 36px 30px;
+  }
+}
+.mobile-menu {
+  display: none;
+  @media screen and (max-width: $bp-mobile-sm) {
+    display: block;
+  }
+  &__btn {
+    @include flexbox($dir: column);
+    gap: 8px;
+    span {
+        width: 50px;
+        height: 2px;
+        display: block;
+        background-color: $black;
+    }    
+  }
+  &:hover .mobile-menu__menu .menu {
+    @include flexbox($dir: column);
+  }
+  &__menu {
+    position: absolute;
+    top: 80px;
+    right: center;
+    background-color: $orange;
+  }
+  .menu__link {
+    display: block;
+    padding: 10px 20px;
+  }
+
+}
+
+.menu {
+  @include flexbox($ai: center);
+  &__link {
+    padding: 15px;
+    font-family: $font-gilroy;
+    @include font($fs: 18px, $lh: 22px, $color: $black);  
+    @media screen and (max-width: 900px) {
+      @include font($fs: 14px, $lh: 22px,);
+    }
+    @media screen and (max-width: 900px) {
+      padding: 10px;
+    }
+    @media screen and (max-width: $bp-mobile-sm) {
+      display: none;
+    }
+}
+}
+.logo {
+  &__link {
+    font-family: $font-HomemadeApple, cursive;
+    font-style: normal;
+    @include font($fs: 18px, $fw: 400, $lh: 39px, $color: $black);
+  }
+}

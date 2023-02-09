@@ -1,0 +1,75 @@
+.main-content {
+  &__sectionFour {    
+    padding: 88px 135px 80px;
+    background-color: $white;
+    @media screen and (max-width:$bp-tablet-lg) {
+      padding: 88px 80px 80px;
+    }
+    @media screen and (max-width:$bp-tablet) {
+      padding: 60px 40px;
+    }
+    
+    .blockOne {
+      @include flexbox($ai: stretch);
+      width: 100%;
+      background-color: $light-black;
+        &__information {
+          padding: 63px 200px 49px 78px;
+          @media screen and (max-width:1200px) {
+            padding: 50px 100px 40px 78px;
+          }
+          @media screen and (max-width:$bp-tablet-lg) {
+            padding: 63px 50px 49px;
+          }
+          @media screen and (max-width:$bp-tablet) {
+            padding: 40px 30px 40px;
+          }
+        }
+        &__img {
+          // width: 40%;
+          flex-shrink: 0;
+           img {
+            @include img()
+           }
+           @media screen and (max-width:$bp-tablet) {
+            flex-shrink: 1;
+          }
+        }
+      
+        @media screen and (max-width: $bp-mobile-sm) {
+          @include flexbox ($dir: column);
+        }  
+
+    }  
+    .sidebar {
+      @include flexbox($jc: space-between, $ai:space-between);
+      @media screen and (max-width: $bp-mobile-sm) {
+        @include flexbox ($dir: column);
+      } 
+    }
+    
+    .blockTwo {       
+       margin-top: 40px;
+         &__leftside {          
+           padding: 48px 48px 50px;
+           background-color: $white;
+           @media screen and (max-width: $bp-mobile-sm) {
+            padding: 30px;
+          } 
+         }
+         &__rightside {
+           padding: 48px 48px 50px;
+           background-color: $white;
+           @media screen and (max-width: $bp-mobile-sm) {
+            padding: 30px;
+            margin-top: 10px;
+          } 
+         }
+         &:hover {
+           box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.05);
+         }
+
+    }
+  }
+  
+}  

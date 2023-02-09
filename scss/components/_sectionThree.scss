@@ -1,0 +1,35 @@
+.main-content {
+  &__sectionThree {
+    @include flexbox($jc: space-between, $ai: center);
+    padding: 81px 235px 69px;
+    background-color: $orange;
+    @media screen and (max-width:1200px) {
+      padding: 80px 130px 69px;
+    }
+    @media screen and (max-width:$bp-tablet-lg) {
+      padding: 81px 80px 69px;
+    }
+    @media screen and (max-width:900px) {
+      padding: 60px 50px;
+    }
+    @media screen and (max-width:$bp-tablet) {
+      padding: 80px 80px 69px;
+    }
+    @media screen and (max-width:610px) {
+      @include flexbox($dir: column, $jc: center, $ai: center);
+      padding: 40px 40px 40px;
+    }
+    @media screen and (max-width: $bp-mobile-sm) {
+      @include flexbox($dir: column, $jc: center, $ai: center);
+      padding: 40px 40px 40px;
+    }
+  }
+}
+.sectionThree {
+  &__btn {
+    @include flexbox();
+    @media screen and (max-width:$bp-tablet) {
+      @include flexbox($dir: column);
+    }
+  }  
+}

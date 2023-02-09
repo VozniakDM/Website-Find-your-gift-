@@ -1,0 +1,43 @@
+.btn {
+  @include flexbox($jc: center, $ai: center);
+  border-radius: 5px;
+  font-family: $font-gilroy;  
+  @include font($fs: 18px, $lh: 22px);
+  text-transform: uppercase;
+    &--small {
+      width: 150px;
+      height: 44px;
+      border: 1px solid $orange;
+      @include font($fs: 18px, $lh: 22px, $color: $orange);      
+    }
+    &--big {
+      width: 200px;
+      height: 60px;
+      border: 1px solid $orange;
+      @include font($fs: 18px, $lh: 22px, $color: $orange);
+    }
+    &--filled {
+      width: 200px;
+      height: 60px;
+      background: $orange;
+      color: $white;
+    }
+    &--filled_black {
+      width: 200px;
+      height: 50px;
+      background: $light-black;
+      border: 1px solid $light-black;
+      color: $white;
+    }
+    &--black {
+      width: 200px;
+      height: 50px;
+      border: 1px solid $black;
+      color: $black;
+      margin-left: 16px;
+      @media screen and (max-width:$bp-tablet) {
+        margin: 0;
+        margin-top: 5px;
+      }
+    }
+}
